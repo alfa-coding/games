@@ -10,5 +10,6 @@ namespace Halma.Logic
        Pair ProposeBestMove(IBoard board, List<IPlayer> enemies );
 
        void UpdateTrack(int newR, int newC, int oldR, int oldC);
+       internal void InitializePositions();
     }
 }

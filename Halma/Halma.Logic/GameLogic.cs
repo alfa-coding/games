@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 namespace Halma.Logic
 {
@@ -22,7 +23,7 @@ namespace Halma.Logic
             else
             {
                 playerA= new StandardPlayer();
-                playerA= new SmartPlayer();
+                playerB= new SmartPlayer();
                 
             }
             
@@ -33,6 +34,7 @@ namespace Halma.Logic
         public bool CanMove(int newR, int newC)
         {
 
+            return true;
         }
 
         public bool Move(int newR, int newC, int oldR, int oldC)
@@ -55,7 +57,7 @@ namespace Halma.Logic
 
         public bool CheckWin()
         {
-            
+            return true;
         }
 
         private void UpdateTurn()
