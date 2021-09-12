@@ -8,5 +8,7 @@ namespace Halma.Logic
        List<Pair> PiecePositions { get; set; }
 
        Pair ProposeBestMove(IBoard board, List<IPlayer> enemies );
+
+       void UpdateTrack(int newR, int newC, int oldR, int oldC);
     }
 }

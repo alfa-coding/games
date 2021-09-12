@@ -9,9 +9,25 @@ namespace Halma.Logic
 
         public IBoard Board { get; set; }
 
-        public GameLogic()
+        public GameLogic(bool modeSmart=false)
         {
+            IPlayer playerA;
+            IPlayer playerB;
             
+            if (!modeSmart)
+            {
+                playerA= new StandardPlayer();
+                playerB= new StandardPlayer();
+            }
+            else
+            {
+                playerA= new StandardPlayer();
+                playerA= new SmartPlayer();
+                
+            }
+            
+            Players.Add(playerA);
+            Players.Add(playerB);
         }
 
         public bool CanMove(int newR, int newC)
@@ -19,17 +35,30 @@ namespace Halma.Logic
 
         }
 
-        public bool Move(int newR, int newC)
+        public bool Move(int newR, int newC, int oldR, int oldC)
         {
+            if (!CanMove(newR,newC))
+            {
+                return false;
+            }
 
+            int indexPlayer= PlayerInTurn;
+
+            var player = Players[indexPlayer];
+
+            player.UpdateTrack(newR, newC, oldR, oldC);
+
+            UpdateTurn();
+
+            return true;
         }
 
         public bool CheckWin()
         {
-
+            
         }
 
-        public void UpdateTurn()
+        private void UpdateTurn()
         {
             PlayerInTurn = (++PlayerInTurn)%Players.Count;
         }

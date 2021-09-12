@@ -1,0 +1,5 @@
+/home/dimas/Documents/SideProjects/games/Halma/Halma.Logic/obj/Debug/net5.0/Halma.Logic.csproj.AssemblyReference.cache
+/home/dimas/Documents/SideProjects/games/Halma/Halma.Logic/obj/Debug/net5.0/Halma.Logic.GeneratedMSBuildEditorConfig.editorconfig
+/home/dimas/Documents/SideProjects/games/Halma/Halma.Logic/obj/Debug/net5.0/Halma.Logic.AssemblyInfoInputs.cache
+/home/dimas/Documents/SideProjects/games/Halma/Halma.Logic/obj/Debug/net5.0/Halma.Logic.AssemblyInfo.cs
+/home/dimas/Documents/SideProjects/games/Halma/Halma.Logic/obj/Debug/net5.0/Halma.Logic.csproj.CoreCompileInputs.cache
