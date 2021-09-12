@@ -6,6 +6,11 @@ namespace Halma.Logic
     public class StandardPlayer : IPlayer
     {
         public List<Pair> PiecePositions { get; set; }
+        public StandardPlayer()
+        {
+            this.PiecePositions= new List<Pair>();
+            Utilities.InitializePositions(PiecePositions);
+        }
         public Pair ProposeBestMove(IBoard board, List<IPlayer> enemies)
         {
             throw new NotImplementedException();
@@ -16,9 +21,6 @@ namespace Halma.Logic
             throw new NotImplementedException();
         }
 
-        void IPlayer.InitializePositions()
-        {
-            throw new NotImplementedException();
-        }
+
     }
 }
