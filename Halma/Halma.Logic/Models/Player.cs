@@ -11,6 +11,7 @@ namespace Halma.Logic
         public Player(string name)
         {
             this.Name= name;
+            this.Pieces= new List<Pair>();
         }
 
         //Todo Player necesita una lista de fichas y a la misma vez necesita saber si una ficha le pertenece o no
