@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/dimas/Documents/SideProjects/games/Halma/Halma.TesterUI/Halma.TesterUI.csproj",
+      "projectUniqueName": "/home/dimas/Documents/side_projects/games/Halma/Halma.TesterUI/Halma.TesterUI.csproj",
       "projectName": "Halma.TesterUI",
-      "projectPath": "/home/dimas/Documents/SideProjects/games/Halma/Halma.TesterUI/Halma.TesterUI.csproj",
+      "projectPath": "/home/dimas/Documents/side_projects/games/Halma/Halma.TesterUI/Halma.TesterUI.csproj",
       "packagesPath": "/home/dimas/.nuget/packages/",
-      "outputPath": "/home/dimas/Documents/SideProjects/games/Halma/Halma.TesterUI/obj/",
+      "outputPath": "/home/dimas/Documents/side_projects/games/Halma/Halma.TesterUI/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/dimas/.nuget/NuGet/NuGet.Config"
@@ -58,7 +58,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/5.0.400/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/5.0.401/RuntimeIdentifierGraph.json"
       }
     }
   }
