@@ -40,6 +40,8 @@ namespace Halma.Logic
                     
                 }
            }
+
+           return 1;
             
         }
 
