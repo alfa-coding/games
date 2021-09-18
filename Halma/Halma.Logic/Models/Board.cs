@@ -2,19 +2,19 @@ using System;
 
 namespace Halma.Logic
 {
-    public class Board : IBoard
+    public class Board 
     {
         private int size;
-        private char[,] internalBoard;
-        public Board()
+        private string[,] internalBoard;
+        public Board(int size)
         {
-            this.size= 16;
-            internalBoard= new char[Size,Size];
+            this.size= size;
+            internalBoard= new string[Size,Size];
         }
         
         public int Size { get=>size;  }
         
-        public char this[int i, int j]
+        public string this[int i, int j]
         {
             get
             {

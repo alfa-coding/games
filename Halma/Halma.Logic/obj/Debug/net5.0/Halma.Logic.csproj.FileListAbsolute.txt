@@ -3,3 +3,15 @@
 /home/dimas/Documents/SideProjects/games/Halma/Halma.Logic/obj/Debug/net5.0/Halma.Logic.AssemblyInfoInputs.cache
 /home/dimas/Documents/SideProjects/games/Halma/Halma.Logic/obj/Debug/net5.0/Halma.Logic.AssemblyInfo.cs
 /home/dimas/Documents/SideProjects/games/Halma/Halma.Logic/obj/Debug/net5.0/Halma.Logic.csproj.CoreCompileInputs.cache
+/home/dimas/Documents/side_projects/games/Halma/Halma.Logic/bin/Debug/net5.0/Halma.Logic.deps.json
+/home/dimas/Documents/side_projects/games/Halma/Halma.Logic/bin/Debug/net5.0/Halma.Logic.dll
+/home/dimas/Documents/side_projects/games/Halma/Halma.Logic/bin/Debug/net5.0/ref/Halma.Logic.dll
+/home/dimas/Documents/side_projects/games/Halma/Halma.Logic/bin/Debug/net5.0/Halma.Logic.pdb
+/home/dimas/Documents/side_projects/games/Halma/Halma.Logic/obj/Debug/net5.0/Halma.Logic.csproj.AssemblyReference.cache
+/home/dimas/Documents/side_projects/games/Halma/Halma.Logic/obj/Debug/net5.0/Halma.Logic.GeneratedMSBuildEditorConfig.editorconfig
+/home/dimas/Documents/side_projects/games/Halma/Halma.Logic/obj/Debug/net5.0/Halma.Logic.AssemblyInfoInputs.cache
+/home/dimas/Documents/side_projects/games/Halma/Halma.Logic/obj/Debug/net5.0/Halma.Logic.AssemblyInfo.cs
+/home/dimas/Documents/side_projects/games/Halma/Halma.Logic/obj/Debug/net5.0/Halma.Logic.csproj.CoreCompileInputs.cache
+/home/dimas/Documents/side_projects/games/Halma/Halma.Logic/obj/Debug/net5.0/Halma.Logic.dll
+/home/dimas/Documents/side_projects/games/Halma/Halma.Logic/obj/Debug/net5.0/ref/Halma.Logic.dll
+/home/dimas/Documents/side_projects/games/Halma/Halma.Logic/obj/Debug/net5.0/Halma.Logic.pdb

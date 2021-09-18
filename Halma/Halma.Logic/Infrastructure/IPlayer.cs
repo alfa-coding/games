@@ -5,11 +5,13 @@ namespace Halma.Logic
 {
     public interface IPlayer
     {
-       List<Pair> PiecePositions { get; set; }
+        string Name { get; set; }
 
-       Pair ProposeBestMove(IBoard board, List<IPlayer> enemies );
+        List<Pair> PiecePositions { get; set; }
 
-       void UpdateTrack(int newR, int newC, int oldR, int oldC);
-       
+        Pair ProposeBestMove(Board board, List<IPlayer> enemies);
+
+        void UpdateTrack(int newR, int newC, int oldR, int oldC);
+
     }
 }
