@@ -6,8 +6,6 @@ namespace Halma.Logic
     {
         private static bool IsCloseNeighborg(Pair initialPosition, Pair destination, int[] dirX, int[] dirY, int boardSize)
         {
-
-
             for (int i = 0; i < dirX.Length; i++)
             {
                 var newRowPosition = initialPosition.Row + dirY[i];

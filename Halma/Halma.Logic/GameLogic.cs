@@ -9,18 +9,18 @@ namespace Halma.Logic
         public string Winner { get; set; }
         public List<Player> Players { get; set; }
         public int IndexPlayerInTurn { get; set; }
-        public bool IsFinished{ get; set;}
+        public bool IsFinished { get; set; }
 
-    public GameLogic(int size, string[] names)
-    {
-        this.Players = new List<Player>(){new Player(names[0]),new Player(names[1])};
-        Utilities.InitializePosition(this.Players,size);
-        this.Board = new Board(size);
-        Utilities.FillBoard(this.Players,this.Board);
-        this.IsFinished = false;
-    }
-        
-       
+        public GameLogic(int size, string[] names)
+        {
+            this.Players = new List<Player>() { new Player(names[0]), new Player(names[1]) };
+            Utilities.InitializePosition(this.Players, size);
+            this.Board = new Board(size);
+            Utilities.FillBoard(this.Players, this.Board);
+            this.IsFinished = false;
+        }
+
+
 
         public bool BelongToPlayerInTurn(Pair pieceToMove)
         {
@@ -28,34 +28,50 @@ namespace Halma.Logic
             var playerInTurn = Players[IndexPlayerInTurn];
             var hasPiece = playerInTurn.HasPiece(pieceToMove);
             return hasPiece;
-            
+
         }
 
+        //Player A, starts at the bottom rigth corner it needs to reach UpLeftCorner
+        //Player B, starts at the upLeftCorner it needs to reach bottom rigth corner        
         public int CheckForWinners()
         {
-           for (int i = 0; i < this.Board.Size; i++)
-           {
-                for (int j = 0; j < this.Board.Size; j++)
-                {
-                    
-                }
-           }
-
-           return 1;
             
+
+            //asuming is A's turn
+            bool upLeftCorner =true;
+            string letterValue ="A";
+            
+            //if B were in turn, I update its values
+            if (IndexPlayerInTurn == 1)
+            {
+               upLeftCorner=false;
+               letterValue="B";
+
+            }
+
+            bool won= DidPlayerWon(upLeftCorner,letterValue);
+            if (won)
+            {
+                return this.IndexPlayerInTurn;
+            }
+
+            return -1;
+
         }
 
-        private bool DidPlayerWon()
+        private bool DidPlayerWon(bool upLeftCorner, string letter)
         {
-            for (int i = 0; i < this.Board.Size - 3; i++)
+            int sizeBoard = this.Board.Size;
+            for (int i = 0; i < sizeBoard - 3; i++)
             {
-                for (int j = 0; j < this.Board.Size - 3 - i; j++)
+                for (int j = 0; j < sizeBoard - 3 - i; j++)
                 {
-                    string currentLetter = this.Board[i,j];
-                  if (currentLetter != "A")
-                  {
-                      return false;
-                  }
+
+                    string currentLetter = upLeftCorner ? this.Board[i, j] : this.Board[sizeBoard - i - 1, sizeBoard - j - 1];
+                    if (currentLetter != letter)
+                    {
+                        return false;
+                    }
 
 
                 }
@@ -77,7 +93,7 @@ namespace Halma.Logic
 
         private bool CanMove(Pair pieceToMove, Pair newPosition)
         {
-            return Utilities.BFS(pieceToMove,newPosition,this.Board);
+            return Utilities.BFS(pieceToMove, newPosition, this.Board);
         }
 
         private void UpdateTurn()
