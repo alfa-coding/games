@@ -101,6 +101,7 @@ namespace Halma.Logic
 
         private void UpdateTurn()
         {
+            Utilities.FillBoard(this.Players,this.Board);
             IndexPlayerInTurn = (++IndexPlayerInTurn) % Players.Count;//asi actualizo el turno, pero aun no se si es a este jugador al que le toca jugar
 
         }

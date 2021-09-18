@@ -23,7 +23,7 @@ namespace Halma.Logic
         internal static void FillBoard(List<Player> players, Board board)
         {
             CleanBoard(board);
-            string[] idenfiers = { "A", "B" };
+            string[] idenfiers = { "B", "A" };
             for (int i = 0; i < players.Count; i++)
             {
                 foreach (var piece in players[i].Pieces)
@@ -66,12 +66,12 @@ namespace Halma.Logic
 
                 var current = queue.Dequeue();
 
-                if (GotThere(current, destination))
+                if (GotThere(current, initialPosition))
                 {
                     return true;
                 }
                 //quizas el destino es mi vecino cercano.
-                if (IsCloseNeighborg(current, destination, dirX, dirY, board.Size))
+                if (IsCloseNeighborg(current, initialPosition, dirX, dirY, board.Size))
                 {
                     return true;
                 }

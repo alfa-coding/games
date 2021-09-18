@@ -46,3 +46,6 @@
 /home/dimas/Documents/SideProjects/dimas_branch/games/Halma/Halma.TesterUI/obj/Debug/net5.0/ref/Halma.TesterUI.dll
 /home/dimas/Documents/SideProjects/dimas_branch/games/Halma/Halma.TesterUI/obj/Debug/net5.0/Halma.TesterUI.pdb
 /home/dimas/Documents/SideProjects/dimas_branch/games/Halma/Halma.TesterUI/obj/Debug/net5.0/Halma.TesterUI.genruntimeconfig.cache
+/home/dimas/Documents/SideProjects/dimas_branch/games/Halma/Halma.TesterUI/bin/Debug/net5.0/Halma.Logic.dll
+/home/dimas/Documents/SideProjects/dimas_branch/games/Halma/Halma.TesterUI/bin/Debug/net5.0/Halma.Logic.pdb
+/home/dimas/Documents/SideProjects/dimas_branch/games/Halma/Halma.TesterUI/obj/Debug/net5.0/Halma.TesterUI.csproj.CopyComplete

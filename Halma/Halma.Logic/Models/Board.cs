@@ -2,26 +2,27 @@ using System;
 
 namespace Halma.Logic
 {
-    public class Board 
+    public class Board
     {
         private int size;
         private string[,] internalBoard;
         public Board(int size)
         {
-            this.size= size;
-            internalBoard= new string[Size,Size];
+            this.size = size;
+            internalBoard = new string[Size, Size];
         }
-        
-        public int Size { get=>size;  }
-        
+
+        public int Size { get => size; }
+
         public string this[int i, int j]
         {
             get
             {
-                return internalBoard[i,j];
+                return internalBoard[i, j];
             }
-            set{
-
+            set
+            {
+                this.internalBoard[i, j] = value;
             }
         }
     }
