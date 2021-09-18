@@ -7,4 +7,4 @@ build_property.PublishSingleFile =
 build_property.IncludeAllContentForSelfExtract = 
 build_property._SupportedPlatformList = Android,iOS,Linux,macOS,Windows
 build_property.RootNamespace = Halma.TesterUI
-build_property.ProjectDir = /home/dimas/Documents/side_projects/games/Halma/Halma.TesterUI/
+build_property.ProjectDir = /home/dimas/Documents/SideProjects/dimas_branch/games/Halma/Halma.TesterUI/
