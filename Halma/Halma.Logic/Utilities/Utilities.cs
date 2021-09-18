@@ -23,12 +23,12 @@ namespace Halma.Logic
         internal static void FillBoard(List<Player> players, Board board)
         {
             CleanBoard(board);
-            string[] idenfiers = {"A","B"};
+            string[] idenfiers = { "A", "B" };
             for (int i = 0; i < players.Count; i++)
             {
                 foreach (var piece in players[i].Pieces)
                 {
-                    board[piece.Row,piece.Col] = idenfiers[i];
+                    board[piece.Row, piece.Col] = idenfiers[i];
                 }
             }
         }
@@ -39,7 +39,7 @@ namespace Halma.Logic
             {
                 for (int j = 0; j < board.Size; j++)
                 {
-                    board[i,j]=null;
+                    board[i, j] = null;
                 }
             }
         }
@@ -52,6 +52,9 @@ namespace Halma.Logic
 
         public static bool BFS(Pair initialPosition, Pair destination, Board board)
         {
+            int[,] steps = new int[board.Size, board.Size];
+            steps[initialPosition.Row, initialPosition.Col] = 1;
+
             //directions=  w,  nw, n, ne, w, se, s, sw
             int[] dirX = { -1, -1, 0, 1, 1, 1, 0, -1 };
             int[] dirY = { 0, -1, -1, -1, 0, 1, 1, 1 };
@@ -63,7 +66,7 @@ namespace Halma.Logic
 
                 var current = queue.Dequeue();
 
-                if (GotThere(current,destination))
+                if (GotThere(current, destination))
                 {
                     return true;
                 }
@@ -81,10 +84,23 @@ namespace Halma.Logic
                         var newRowPosition = current.Row + dirY[i];
                         var newColPosition = current.Col + dirX[i];
 
-                        if (InRange(newRowPosition, newColPosition, board.Size)&&IsFarNeighborg(newColPosition,newRowPosition, board, dirY[i],dirX[i]))
+                        if (InRange(newRowPosition, newColPosition, board.Size) && IsFarNeighborg(newColPosition, newRowPosition, board, dirY[i], dirX[i]))
                         {
-                            //meter en la cola, a la casilla del vecino lejano, que este en la misma direccion del vecino cercano
-                            queue.Enqueue(new Pair(newRowPosition+dirY[i],newColPosition+dirX[i]));
+                            int farColPosition = newColPosition + dirX[i];
+                            int farRowPosition = newRowPosition + dirY[i];
+
+                            if (steps[farRowPosition, farColPosition] >= 1)
+                            {
+                                //I already passed over this position.
+                                continue;
+                            }
+                            else
+                            {
+                                //I mark the amount of steps to get there so I dont walk again.
+                                steps[farRowPosition, farColPosition] = steps[current.Row, current.Col] + 1;
+                                //meter en la cola, a la casilla del vecino lejano, que este en la misma direccion del vecino cercano
+                                queue.Enqueue(new Pair(farRowPosition, farColPosition));
+                            }
                         }
                     }
                 }
@@ -95,12 +111,12 @@ namespace Halma.Logic
         private static bool IsFarNeighborg(int newColPosition, int newRowPosition, Board board, int dirY, int dirX)
         {
             //si la casilla vecina esta vacia, no es vecino lejano
-            if (board[newRowPosition,newColPosition]==null)
+            if (board[newRowPosition, newColPosition] == null)
             {
                 return false;
             }
             //si a pesar de que la casilla vecina no este vacia, y, la lejana esta ocupada
-            if (board[newRowPosition+dirY,newColPosition+dirX]!=null)
+            if (board[newRowPosition + dirY, newColPosition + dirX] != null)
             {
                 return false;
             }
@@ -110,18 +126,22 @@ namespace Halma.Logic
 
         private static bool GotThere(Pair current, Pair destination)
         {
-            return current.Row==destination.Row && current.Col==destination.Col;
+            return current.Row == destination.Row && current.Col == destination.Col;
         }
 
+
+        //Player A, starts at the bottom rigth
+        //Player B, starts at the upLeftCorner
         public static void InitializePosition(List<Player> players, int sizeBoard)
         {
             for (int i = 0; i < sizeBoard - 3; i++)
             {
                 for (int j = 0; j < sizeBoard - 3 - i; j++)
                 {
-                  //System.Console.WriteLine($"{i},{j} SE OPONE A {sizeBoard-i-1},{sizeBoard-j-1}");
-                  players[0].Pieces.Add(new Pair(i,j));
-                  players[1].Pieces.Add(new Pair(sizeBoard-i-1,sizeBoard-j-1));
+                    //player B
+                    players[0].Pieces.Add(new Pair(i, j));
+                    //Player A
+                    players[1].Pieces.Add(new Pair(sizeBoard - i - 1, sizeBoard - j - 1));
 
                 }
             }

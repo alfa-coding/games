@@ -13,6 +13,8 @@ namespace Halma.Logic
 
         public GameLogic(int size, string[] names)
         {
+            //Player B, starts at the upLeftCorner, it will be player 0
+            //Player A, starts at the bottom rigth, it will be player 1
             this.Players = new List<Player>() { new Player(names[0]), new Player(names[1]) };
             Utilities.InitializePosition(this.Players, size);
             this.Board = new Board(size);
@@ -32,7 +34,8 @@ namespace Halma.Logic
         }
 
         //Player A, starts at the bottom rigth corner it needs to reach UpLeftCorner
-        //Player B, starts at the upLeftCorner it needs to reach bottom rigth corner        
+        //Player B, starts at the upLeftCorner it needs to reach bottom rigth corner 
+        //Check the player's possition initializer       
         public int CheckForWinners()
         {
             
