@@ -5,65 +5,83 @@ namespace Halma.Logic
 {
     public class GameLogic
     {
-        public int PlayerInTurn { get; set; }
-        public List<IPlayer> Players { get; set; }
+        public Board Board { get; set; }
+        public string Winner { get; set; }
+        public List<Player> Players { get; set; }
+        public int IndexPlayerInTurn { get; set; }
+        public bool IsFinished{ get; set;}
 
-        public IBoard Board { get; set; }
+    public GameLogic(int size, string[] names)
+    {
+        this.Players = new List<Player>(){new Player(names[0]),new Player(names[1])};
+        Utilities.InitializePosition(this.Players,size);
+        this.Board = new Board(size);
+        Utilities.FillBoard(this.Players,this.Board);
+        this.IsFinished = false;
+    }
+        
+       
 
-        public GameLogic(bool modeSmart=false)
+        public bool BelongToPlayerInTurn(Pair pieceToMove)
         {
-            IPlayer playerA;
-            IPlayer playerB;
+            //como saber cuál es el jugador que esta en turno?
+            var playerInTurn = Players[IndexPlayerInTurn];
+            var hasPiece = playerInTurn.HasPiece(pieceToMove);
+            return hasPiece;
             
-            if (!modeSmart)
-            {
-                playerA= new StandardPlayer();
-                playerB= new StandardPlayer();
-            }
-            else
-            {
-                playerA= new StandardPlayer();
-                playerB= new SmartPlayer();
-                
-            }
+        }
+
+        public int CheckForWinners()
+        {
+           for (int i = 0; i < this.Board.Size; i++)
+           {
+                for (int j = 0; j < this.Board.Size; j++)
+                {
+                    
+                }
+           }
             
-            Players.Add(playerA);
-            Players.Add(playerB);
         }
 
-        public bool CanMove(int newR, int newC)
+        private bool DidPlayerWon()
         {
-
-            return true;
-        }
-
-        public bool Move(int newR, int newC, int oldR, int oldC)
-        {
-            if (!CanMove(newR,newC))
+            for (int i = 0; i < this.Board.Size - 3; i++)
             {
-                return false;
+                for (int j = 0; j < this.Board.Size - 3 - i; j++)
+                {
+                    string currentLetter = this.Board[i,j];
+                  if (currentLetter != "A")
+                  {
+                      return false;
+                  }
+
+
+                }
             }
-
-            int indexPlayer= PlayerInTurn;
-
-            var player = Players[indexPlayer];
-
-            player.UpdateTrack(newR, newC, oldR, oldC);
-
-            UpdateTurn();
-
             return true;
         }
 
-        public bool CheckWin()
+        public bool TryMove(Pair pieceToMove, Pair newPosition)
         {
-            return true;
+            if (CanMove(pieceToMove, newPosition))
+            {
+                var playerInTurn = Players[IndexPlayerInTurn];//aqui obtengo el jugador en turno
+                playerInTurn.UpdatePieces(pieceToMove, newPosition); //ahora actualizamos la pieza vieja con la nueva posicion de que esta pieza estara                                             
+                UpdateTurn();
+                return true;
+            }
+            return false;
+        }
+
+        private bool CanMove(Pair pieceToMove, Pair newPosition)
+        {
+            return Utilities.BFS(pieceToMove,newPosition,this.Board);
         }
 
         private void UpdateTurn()
         {
-            PlayerInTurn = (++PlayerInTurn)%Players.Count;
-        }
+            IndexPlayerInTurn = (++IndexPlayerInTurn) % Players.Count;//asi actualizo el turno, pero aun no se si es a este jugador al que le toca jugar
 
+        }
     }
 }
