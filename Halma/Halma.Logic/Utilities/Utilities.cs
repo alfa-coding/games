@@ -53,7 +53,7 @@ namespace Halma.Logic
         public static bool BFS(Pair initialPosition, Pair destination, Board board)
         {
             int[,] steps = new int[board.Size, board.Size];
-            steps[initialPosition.Row, initialPosition.Col] = 1;
+            steps[destination.Row, destination.Col] = 1;
 
             //directions=  w,  nw, n, ne, w, se, s, sw
             int[] dirX = { -1, -1, 0, 1, 1, 1, 0, -1 };
