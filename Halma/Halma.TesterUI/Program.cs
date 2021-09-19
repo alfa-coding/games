@@ -8,10 +8,27 @@ namespace Halma.TesterUI
         static void Main(string[] args)
         {
             //RunConsoleGUI();
-            TestBFS();
+            TestBFS_8x8();
         }
 
-        private static void TestBFS()
+        private static void TestBFS_8x8()
+        {
+            Board board= new Board(8);
+            Pair initial= new Pair(6,7);
+            Pair dest= new Pair(4,1);
+
+            board[3,2]="A";
+            board[1,2]="A";
+            board[1,4]="A";
+            board[1,6]="A";
+            board[3,4]="A";
+            board[3,6]="A";
+            board[5,6]="A";
+
+
+            System.Console.WriteLine(Utilities.BFS(initial,dest,board));
+        }
+        private static void TestBFS_3x3()
         {
             Board board= new Board(3);
             Pair initial= new Pair(0,0);
