@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "Halma.WFormsGUI/1.0.0": {
+        "dependencies": {
+          "Halma.Logic": "1.0.0"
+        },
+        "runtime": {
+          "Halma.WFormsGUI.dll": {}
+        }
+      },
+      "Halma.Logic/1.0.0": {
+        "runtime": {
+          "Halma.Logic.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Halma.WFormsGUI/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Halma.Logic/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

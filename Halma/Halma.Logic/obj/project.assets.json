@@ -8,24 +8,34 @@
     "net5.0": []
   },
   "packageFolders": {
-    "/home/dimas/.nuget/packages/": {}
+    "C:\\Users\\allop\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
+    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/dimas/Documents/SideProjects/games/Halma/Halma.Logic/Halma.Logic.csproj",
+      "projectUniqueName": "C:\\Users\\allop\\source\\Repos\\games_code\\games\\Halma\\Halma.Logic\\Halma.Logic.csproj",
       "projectName": "Halma.Logic",
-      "projectPath": "/home/dimas/Documents/SideProjects/games/Halma/Halma.Logic/Halma.Logic.csproj",
-      "packagesPath": "/home/dimas/.nuget/packages/",
-      "outputPath": "/home/dimas/Documents/SideProjects/games/Halma/Halma.Logic/obj/",
+      "projectPath": "C:\\Users\\allop\\source\\Repos\\games_code\\games\\Halma\\Halma.Logic\\Halma.Logic.csproj",
+      "packagesPath": "C:\\Users\\allop\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\allop\\source\\Repos\\games_code\\games\\Halma\\Halma.Logic\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+      ],
       "configFilePaths": [
-        "/home/dimas/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\allop\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -58,7 +68,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/5.0.401/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
       }
     }
   }
