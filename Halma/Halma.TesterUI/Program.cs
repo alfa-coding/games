@@ -13,12 +13,12 @@ namespace Halma.TesterUI
             TestBFS_5x5_farN_False();
             TestBFS_7x7_farN_withStep_False();
             TestBFS_7x7_farN_withStep_True();
-            
+            TestBFS_8x8_farN_withSeveralSteps_True();
 
         }
         private static void TestBFS_2x2_closeN_False()
         {
-            System.Console.WriteLine("TestBFS_2x2_closeN_False");  
+            System.Console.WriteLine("TestBFS_2x2_closeN_False");
             Board board = new Board(2);
             Pair initial = new Pair(0, 0);
             Pair dest = new Pair(1, 1);
@@ -26,35 +26,35 @@ namespace Halma.TesterUI
             board[0, 0] = "A";
             board[1, 1] = "A";
 
-            System.Console.WriteLine(Utilities.BFS(initial, dest, board));
+            System.Console.WriteLine(Utilities.CanMove(initial, dest, board));
         }
         private static void TestBFS_5x5_closeN_True()
         {
             System.Console.WriteLine("TestBFS_5x5_closeN_True");
             Board board = new Board(5);
-            Pair initial = new Pair(2,2);
+            Pair initial = new Pair(2, 2);
             Pair dest = new Pair(1, 3);
 
-            board[0,0]="B";
-            board[1,1]="B";
-            board[2,2]="A";
-            board[3,3]="B";
+            board[0, 0] = "B";
+            board[1, 1] = "B";
+            board[2, 2] = "A";
+            board[3, 3] = "B";
 
-            System.Console.WriteLine(Utilities.BFS(initial, dest, board));
+            System.Console.WriteLine(Utilities.CanMove(initial, dest, board));
 
         }
         private static void TestBFS_5x5_farN_True()
         {
             System.Console.WriteLine("TestBFS_5x5_farN_True");
             Board board = new Board(5);
-            Pair initial = new Pair(2,2);
-            Pair dest = new Pair(4,4);
-            board[0,0]="B";
-            board[1,1]="B";
-            board[2,2]="A";
-            board[3,3]="B";
+            Pair initial = new Pair(2, 2);
+            Pair dest = new Pair(4, 4);
+            board[0, 0] = "B";
+            board[1, 1] = "B";
+            board[2, 2] = "A";
+            board[3, 3] = "B";
 
-            System.Console.WriteLine(Utilities.BFS(initial, dest, board));
+            System.Console.WriteLine(Utilities.CanMove(initial, dest, board));
 
 
         }
@@ -62,48 +62,49 @@ namespace Halma.TesterUI
         {
             System.Console.WriteLine("TestBFS_5x5_farN_False");
             Board board = new Board(5);
-            Pair initial = new Pair(2,2);
-            Pair dest = new Pair(0,0);
-            board[0,0]="B";
-            board[1,1]="B";
-            board[2,2]="A";
-            board[3,3]="B";
-            System.Console.WriteLine(Utilities.BFS(initial, dest, board));
+            Pair initial = new Pair(2, 2);
+            Pair dest = new Pair(0, 0);
+            board[0, 0] = "B";
+            board[1, 1] = "B";
+            board[2, 2] = "A";
+            board[3, 3] = "B";
+            System.Console.WriteLine(Utilities.CanMove(initial, dest, board));
 
         }
         private static void TestBFS_7x7_farN_withStep_False()
         {
             System.Console.WriteLine("TestBFS_7x7_farN_withStep_False");
             Board board = new Board(7);
-            Pair initial = new Pair(0, 0);
-            Pair dest = new Pair(1,5);
-            board[0,0]="B";
-            board[1,1]="B";
-            board[2,2]="A";
-            board[3,3]="B";
-            board[1,3]="A";
-            board[3,5]="A";
-            System.Console.WriteLine(Utilities.BFS(initial, dest, board));
+            Pair initial = new Pair(2, 2);
+            Pair dest = new Pair(1, 5);
+            board[0, 0] = "B";
+            board[1, 1] = "B";
+            board[2, 2] = "A";
+            board[3, 3] = "B";
+            board[1, 3] = "A";
+            board[3, 5] = "A";
+            System.Console.WriteLine(Utilities.CanMove(initial, dest, board));
 
         }
         private static void TestBFS_7x7_farN_withStep_True()
         {
             System.Console.WriteLine("TestBFS_7x7_farN_withStep_True");
             Board board = new Board(7);
-            Pair initial = new Pair(0, 0);
-            Pair dest = new Pair(2,6);
-            board[0,0]="B";
-            board[1,1]="B";
-            board[2,2]="A";
-            board[3,3]="B";
-            board[1,3]="A";
-            board[3,5]="A";
-            System.Console.WriteLine(Utilities.BFS(initial, dest, board));
+            Pair initial = new Pair(2, 2);
+            Pair dest = new Pair(2, 6);
+            board[0, 0] = "B";
+            board[1, 1] = "B";
+            board[2, 2] = "A";
+            board[3, 3] = "B";
+            board[1, 3] = "A";
+            board[3, 5] = "A";
+            System.Console.WriteLine(Utilities.CanMove(initial, dest, board));
 
         }
 
-        private static void TestBFS_8x8_farN_withStep_True()
+        private static void TestBFS_8x8_farN_withSeveralSteps_True()
         {
+            System.Console.WriteLine("TestBFS_8x8_farN_withSeveralSteps_True");
             Board board = new Board(8);
             Pair initial = new Pair(6, 7);
             Pair dest = new Pair(4, 1);
@@ -115,9 +116,10 @@ namespace Halma.TesterUI
             board[3, 4] = "A";
             board[3, 6] = "A";
             board[5, 6] = "A";
+            board[6, 7] = "A";
 
 
-            System.Console.WriteLine(Utilities.BFS(initial, dest, board));
+            System.Console.WriteLine(Utilities.CanMove(initial, dest, board));
         }
 
         private static void RunConsoleGUI()

@@ -38,21 +38,21 @@ namespace Halma.Logic
         //Check the player's possition initializer       
         public int CheckForWinners()
         {
-            
+
 
             //asuming is A's turn
-            bool upLeftCorner =true;
-            string letterValue ="A";
-            
+            bool upLeftCorner = true;
+            string letterValue = "A";
+
             //if B were in turn, I update its values
             if (IndexPlayerInTurn == 1)
             {
-               upLeftCorner=false;
-               letterValue="B";
+                upLeftCorner = false;
+                letterValue = "B";
 
             }
 
-            bool won= DidPlayerWon(upLeftCorner,letterValue);
+            bool won = DidPlayerWon(upLeftCorner, letterValue);
             if (won)
             {
                 return this.IndexPlayerInTurn;
@@ -96,12 +96,13 @@ namespace Halma.Logic
 
         private bool CanMove(Pair pieceToMove, Pair newPosition)
         {
-            return Utilities.BFS(pieceToMove, newPosition, this.Board);
+            return Utilities.CanMove(pieceToMove,newPosition,this.Board);
+            
         }
 
         private void UpdateTurn()
         {
-            Utilities.FillBoard(this.Players,this.Board);
+            Utilities.FillBoard(this.Players, this.Board);
             IndexPlayerInTurn = (++IndexPlayerInTurn) % Players.Count;//asi actualizo el turno, pero aun no se si es a este jugador al que le toca jugar
 
         }
