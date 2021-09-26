@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/dimas/Documents/SideProjects/dimas_branch/games/Halma/Halma.TesterUI/Halma.TesterUI.csproj": {}
+    "/home/dimas/Documents/SideProjects/games/Halma/Halma.TesterUI/Halma.TesterUI.csproj": {}
   },
   "projects": {
-    "/home/dimas/Documents/SideProjects/dimas_branch/games/Halma/Halma.Logic/Halma.Logic.csproj": {
+    "/home/dimas/Documents/SideProjects/games/Halma/Halma.Logic/Halma.Logic.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/dimas/Documents/SideProjects/dimas_branch/games/Halma/Halma.Logic/Halma.Logic.csproj",
+        "projectUniqueName": "/home/dimas/Documents/SideProjects/games/Halma/Halma.Logic/Halma.Logic.csproj",
         "projectName": "Halma.Logic",
-        "projectPath": "/home/dimas/Documents/SideProjects/dimas_branch/games/Halma/Halma.Logic/Halma.Logic.csproj",
+        "projectPath": "/home/dimas/Documents/SideProjects/games/Halma/Halma.Logic/Halma.Logic.csproj",
         "packagesPath": "/home/dimas/.nuget/packages/",
-        "outputPath": "/home/dimas/Documents/SideProjects/dimas_branch/games/Halma/Halma.Logic/obj/",
+        "outputPath": "/home/dimas/Documents/SideProjects/games/Halma/Halma.Logic/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/dimas/.nuget/NuGet/NuGet.Config"
@@ -52,18 +52,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/5.0.400/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/5.0.401/RuntimeIdentifierGraph.json"
         }
       }
     },
-    "/home/dimas/Documents/SideProjects/dimas_branch/games/Halma/Halma.TesterUI/Halma.TesterUI.csproj": {
+    "/home/dimas/Documents/SideProjects/games/Halma/Halma.TesterUI/Halma.TesterUI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/dimas/Documents/SideProjects/dimas_branch/games/Halma/Halma.TesterUI/Halma.TesterUI.csproj",
+        "projectUniqueName": "/home/dimas/Documents/SideProjects/games/Halma/Halma.TesterUI/Halma.TesterUI.csproj",
         "projectName": "Halma.TesterUI",
-        "projectPath": "/home/dimas/Documents/SideProjects/dimas_branch/games/Halma/Halma.TesterUI/Halma.TesterUI.csproj",
+        "projectPath": "/home/dimas/Documents/SideProjects/games/Halma/Halma.TesterUI/Halma.TesterUI.csproj",
         "packagesPath": "/home/dimas/.nuget/packages/",
-        "outputPath": "/home/dimas/Documents/SideProjects/dimas_branch/games/Halma/Halma.TesterUI/obj/",
+        "outputPath": "/home/dimas/Documents/SideProjects/games/Halma/Halma.TesterUI/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/dimas/.nuget/NuGet/NuGet.Config"
@@ -78,8 +78,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "/home/dimas/Documents/SideProjects/dimas_branch/games/Halma/Halma.Logic/Halma.Logic.csproj": {
-                "projectPath": "/home/dimas/Documents/SideProjects/dimas_branch/games/Halma/Halma.Logic/Halma.Logic.csproj"
+              "/home/dimas/Documents/SideProjects/games/Halma/Halma.Logic/Halma.Logic.csproj": {
+                "projectPath": "/home/dimas/Documents/SideProjects/games/Halma/Halma.Logic/Halma.Logic.csproj"
               }
             }
           }
@@ -108,7 +108,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/5.0.400/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/5.0.401/RuntimeIdentifierGraph.json"
         }
       }
     }
