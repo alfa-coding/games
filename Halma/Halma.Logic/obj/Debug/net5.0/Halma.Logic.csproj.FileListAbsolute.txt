@@ -27,3 +27,10 @@
 /home/dimas/Documents/SideProjects/dimas_branch/games/Halma/Halma.Logic/obj/Debug/net5.0/Halma.Logic.dll
 /home/dimas/Documents/SideProjects/dimas_branch/games/Halma/Halma.Logic/obj/Debug/net5.0/ref/Halma.Logic.dll
 /home/dimas/Documents/SideProjects/dimas_branch/games/Halma/Halma.Logic/obj/Debug/net5.0/Halma.Logic.pdb
+/home/dimas/Documents/SideProjects/games/Halma/Halma.Logic/bin/Debug/net5.0/Halma.Logic.deps.json
+/home/dimas/Documents/SideProjects/games/Halma/Halma.Logic/bin/Debug/net5.0/Halma.Logic.dll
+/home/dimas/Documents/SideProjects/games/Halma/Halma.Logic/bin/Debug/net5.0/ref/Halma.Logic.dll
+/home/dimas/Documents/SideProjects/games/Halma/Halma.Logic/bin/Debug/net5.0/Halma.Logic.pdb
+/home/dimas/Documents/SideProjects/games/Halma/Halma.Logic/obj/Debug/net5.0/Halma.Logic.dll
+/home/dimas/Documents/SideProjects/games/Halma/Halma.Logic/obj/Debug/net5.0/ref/Halma.Logic.dll
+/home/dimas/Documents/SideProjects/games/Halma/Halma.Logic/obj/Debug/net5.0/Halma.Logic.pdb
