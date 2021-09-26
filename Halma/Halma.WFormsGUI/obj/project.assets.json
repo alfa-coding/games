@@ -1,0 +1,101 @@
+{
+  "version": 3,
+  "targets": {
+    "net5.0-windows7.0": {
+      "Halma.Logic/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/Halma.Logic.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Halma.Logic.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Halma.Logic/1.0.0": {
+      "type": "project",
+      "path": "../Halma.Logic/Halma.Logic.csproj",
+      "msbuildProject": "../Halma.Logic/Halma.Logic.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net5.0-windows7.0": [
+      "Halma.Logic >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\allop\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
+    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\allop\\source\\Repos\\games_code\\games\\Halma\\Halma.WFormsGUI\\Halma.WFormsGUI.csproj",
+      "projectName": "Halma.WFormsGUI",
+      "projectPath": "C:\\Users\\allop\\source\\Repos\\games_code\\games\\Halma\\Halma.WFormsGUI\\Halma.WFormsGUI.csproj",
+      "packagesPath": "C:\\Users\\allop\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\allop\\source\\Repos\\games_code\\games\\Halma\\Halma.WFormsGUI\\obj\\",
+      "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\allop\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net5.0-windows7.0"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net5.0-windows7.0": {
+          "targetAlias": "net5.0-windows",
+          "projectReferences": {
+            "C:\\Users\\allop\\source\\Repos\\games_code\\games\\Halma\\Halma.Logic\\Halma.Logic.csproj": {
+              "projectPath": "C:\\Users\\allop\\source\\Repos\\games_code\\games\\Halma\\Halma.Logic\\Halma.Logic.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net5.0-windows7.0": {
+        "targetAlias": "net5.0-windows",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          },
+          "Microsoft.WindowsDesktop.App.WindowsForms": {
+            "privateAssets": "none"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}
